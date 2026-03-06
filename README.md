@@ -1,16 +1,56 @@
-# React + Vite
+# Ankit Anand — UX Designer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite portfolio site with case studies (Behance/Figma), micro-interactions, and responsive layout.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+Open [http://localhost:5173](http://localhost:5173).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Build
 
-## Expanding the ESLint configuration
+```bash
+npm run build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Output is in `dist/`.
+
+## Deploy to GitHub Pages
+
+The repo is set up to deploy to GitHub Pages via GitHub Actions.
+
+### One-time setup
+
+1. **Create a GitHub repo** and push this project (e.g. `ankit-portfolio` or `ankit-anand`).
+
+2. **Turn on GitHub Pages**
+   - Repo → **Settings** → **Pages**
+   - Under **Build and deployment**, set **Source** to **GitHub Actions**.
+
+3. **Push to `main` or `master`**  
+   The workflow runs on every push to `main`/`master`, builds the site with the correct base path, and deploys it.
+
+Your site will be live at:
+
+**`https://<your-username>.github.io/<repo-name>/`**
+
+Example: if the repo is `ankit-portfolio`, the URL is  
+`https://yourusername.github.io/ankit-portfolio/`.
+
+### Deploying from a different branch
+
+Edit `.github/workflows/deploy.yml` and change:
+
+```yaml
+on:
+  push:
+    branches: [main, master]   # add or change the branch name
+```
+
+### Custom domain (optional)
+
+In **Settings → Pages**, set **Custom domain** to your domain and follow the DNS instructions.
