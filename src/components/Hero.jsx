@@ -91,7 +91,7 @@ export default function Hero() {
           }}
         >
           <img
-            src={personalInfo.profileImage}
+            src={import.meta.env.BASE_URL + personalInfo.profileImage}
             alt={personalInfo.name}
             loading="eager"
           />

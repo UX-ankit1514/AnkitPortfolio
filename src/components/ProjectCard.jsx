@@ -44,7 +44,7 @@ export default function ProjectCard({ project }) {
     >
       <motion.div className="project-image" variants={imageVariants}>
         <img
-          src={project.image}
+          src={import.meta.env.BASE_URL + project.image}
           alt={project.title}
           loading="lazy"
         />
